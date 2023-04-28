@@ -565,7 +565,7 @@ svg {
 }
 .footer-container {
   display: flex;
-  
+
   align-items: baseline;
 }
 .footer-text-right {
@@ -594,8 +594,6 @@ svg {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-
-
 .social-media-list-footer {
   display: flex;
   justify-content: center;
@@ -620,8 +618,7 @@ svg {
 .subscribe-form {
   display: flex;
   gap: 24px;
-  align-items:end;
-  
+  align-items: end;
 }
 .subscribe-title {
   font-family: "Roboto";
@@ -629,8 +626,6 @@ svg {
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-
-  
 
   letter-spacing: 0.02em;
 
@@ -649,29 +644,15 @@ svg {
   background: #2e2f42;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
-  padding-left: 16px;
+  padding: 8px 16px 10px;
 
   color: #ffffff;
+  
 }
 
-.subscribe-box {
-  position: relative;
-}
-.subscribe-input-email {
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 16px;
-  transform: translateY(-50%);
 
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 24px;
-  letter-spacing: 0.04em;
-  color: #ffffff;
-}
+
+
 .subscribe-btn {
   height: 40px;
   width: 165px;
@@ -695,7 +676,7 @@ svg {
 
   transition-property: background-color;
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .subscribe-btn:hover,
 .subscribe-btn:focus {
@@ -708,6 +689,15 @@ svg {
   position: absolute;
   top: 10px;
   right: 24px;
+  pointer-events: none;
+}
+.subscribe-input::placeholder {
+ 
+  font-size: 12px;
+  
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  align-items: center;
   
 }
 
@@ -909,7 +899,7 @@ form {
 .modal-fild {
   width: 100%;
   height: 40px;
-  padding-left: 38px;
+  padding: 0px 38px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   transition-property: border-color;
@@ -1000,10 +990,6 @@ textarea:focus {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-form-agreement-box {
-  visibility: hidden;
-}
-
 .btn-modal {
   display: block;
   margin: 0 auto;
@@ -1024,13 +1010,37 @@ textarea:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: none;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-/*Castom Chackbox*/
+
+.btn-modal:hover,
+.btn-modal:focus {
+  background-color: #404bbf;
+}
+/*Castom Chackbox #1*/
+/*
+.modal-form-agreement-box {
+  visibility: hidden;
+}
+
 .modal-form-agreement {
   display: flex;
   align-items: center;
   gap: 8px;
   margin-bottom: 24px;
+}
+.modal-form-agreement-link {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+
+  color: #4D5AE5;
+
+  letter-spacing: 0.04em;
 }
 
 .modal-form-agreement::before {
@@ -1049,18 +1059,45 @@ textarea:focus {
   background-position: center;
 }
 
-.modal-form-agreement-box:focus + .modal-form-agreement::before {
+.modal-form-agreement::before:checked {
+  border: 1px solid #404bbf;
+}
+*/
+
+/*========Castom checkbox#2 Yarik*/
+.agreement-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+  
+}
+.modal-form-agreement-box {
+  appearance: none;
+
+  width: 16px;
+  height: 16px;
+
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  background-size: 0;
+}
+.modal-form-agreement-box:checked {
+  background-color:  #4d5ae5;
+  background-image: url(../images/Vector-check-box.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  background-size: 10px;
+
 }
 
-@keyframes modalWindow {
-  0% {
-    transform: scale(0);
-  }
-  50% {
-    transform: scale(0.5);
-  }
 
-  100% {
-    transform: scale(1);
-  }
-}

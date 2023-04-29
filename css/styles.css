@@ -567,6 +567,7 @@ svg {
   display: flex;
 
   align-items: baseline;
+  justify-content: space-between;
 }
 .footer-text-right {
   font-weight: 500;
@@ -619,6 +620,7 @@ svg {
   display: flex;
   gap: 24px;
   align-items: end;
+
 }
 .subscribe-title {
   font-family: "Roboto";
@@ -647,11 +649,7 @@ svg {
   padding: 8px 16px 10px;
 
   color: #ffffff;
-  
 }
-
-
-
 
 .subscribe-btn {
   height: 40px;
@@ -692,13 +690,11 @@ svg {
   pointer-events: none;
 }
 .subscribe-input::placeholder {
- 
   font-size: 12px;
-  
+
   letter-spacing: 0.04em;
   color: #ffffff;
   align-items: center;
-  
 }
 
 /*====================================Portfolio=============================*/
@@ -1070,7 +1066,6 @@ textarea:focus {
   align-items: center;
   gap: 8px;
   margin-bottom: 24px;
-  
 }
 .modal-form-agreement-box {
   appearance: none;
@@ -1088,7 +1083,7 @@ textarea:focus {
   background-size: 0;
 }
 .modal-form-agreement-box:checked {
-  background-color:  #4d5ae5;
+  background-color: #4d5ae5;
   background-image: url(../images/Vector-check-box.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -1097,7 +1092,8 @@ textarea:focus {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   background-size: 10px;
-
 }
 
-
+.modal-form-agreement-link {
+  color: #4D5AE5;
+}
